@@ -1,0 +1,10 @@
+INSERT INTO category (parent_id, depth, name, created_at, modified_at, deleted_at) VALUES (null, 1, '디지털', '2022-08-07 12:27:39', '2022-08-07 12:27:50', null);
+INSERT INTO category (parent_id, depth, name, created_at, modified_at, deleted_at) VALUES (1, 2, '컴퓨터', '2022-08-07 12:28:13', '2022-08-07 12:28:17', null);
+INSERT INTO item (member_id, category_id, title, content, thumbnail, price_goal, created_at, modified_at, deleted_at) VALUES (1, 2, '삼성전자 DDR4-3200 (16GB)', null, null, 60000, '2022-08-07 12:30:17', '2022-08-07 12:30:18', null);
+INSERT INTO item_html (item_id, item_url, price_html_tag, created_at, modified_at, deleted_at) VALUES (1, 'https://prod.danawa.com/info/?pcode=11790199', '<em class="prc_c">68,530</em>', '2022-08-07 12:31:31', '2022-08-07 12:31:32', null);
+INSERT INTO item_image (item_id, name, url, size, resize_name, resize_url, resize_size, created_at, modified_at, deleted_at) VALUES (1, '11790199_1.jpg', 'https://img.danawa.com/prod_img/500000/199/790/img/11790199_1.jpg?shrink=330:330&_v=20210701162712', 9000, '11790199_1.jpg', 'https://img.danawa.com/prod_img/500000/199/790/img/11790199_1.jpg?shrink=330:330&_v=20210701162712', 9000, '2022-08-07 12:33:44', '2022-08-07 12:33:46', null);
+INSERT INTO item_value_checker_item.item_price_history (item_id, price, created_at, modified_at, deleted_at) VALUES (1, 68530, '2022-08-07 12:34:29', '2022-08-07 12:34:30', null);
+
+insert into member(id, identity, password, nickname, email, created_at, modified_at, deleted_at) values(1, 'choimory', 'asdqwe123', '중윤최', 'choimory@naver.com', '2000-01-01 00:00:00', '2000-01-01 00:00:00', null);
+insert into member_authority(id, member_id, auth_level, created_at, modified_at, deleted_at) values (1, 1, 'MEMBER', '2000-01-01 00:00:00', '2000-01-01 00:00:00', null);
+insert into member_social(id, member_id, social_type, social_id, created_at, modified_at, deleted_at) values (1, 1, 'NAVER', 'choimory', '2000-01-01 00:00:00', '2000-01-01 00:00:00', null), (2, 1, 'GOOGLE', 'choimory@google.com', '2000-01-01 00:00:00', '2000-01-01 00:00:00', null);
