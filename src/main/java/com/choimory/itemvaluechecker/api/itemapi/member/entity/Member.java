@@ -9,11 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@SuperBuilder(toBuilder = true)
+@Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
 public class Member extends CommonDateTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
