@@ -15,11 +15,10 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-@SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class CommonDateTimeEntity implements Serializable {
+public abstract class CommonDateTimeEntity implements Serializable {
     @CreatedDate
     private LocalDateTime createdAt;
     @LastModifiedDate
