@@ -1,0 +1,10 @@
+spring:
+  config:
+    activate:
+      on-profile: datasource
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://${mariadb-host}:${mariadb-port}/${mariadb-schema}
+    username: ${mariadb-user}
+    password: ${mariadb-password}
