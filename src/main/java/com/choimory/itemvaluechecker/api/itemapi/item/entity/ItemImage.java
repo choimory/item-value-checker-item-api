@@ -7,12 +7,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
-@Builder
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
 public class ItemImage extends CommonDateTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +25,17 @@ public class ItemImage extends CommonDateTimeEntity {
     private String resizeName;
     private String resizeUrl;
     private String resizeSize;
+
+    @Builder(toBuilder = true)
+    public ItemImage(LocalDateTime createdAt, LocalDateTime modifiedAt, LocalDateTime deletedAt, Long id, Item item, String name, String url, String size, String resizeName, String resizeUrl, String resizeSize) {
+        super(createdAt, modifiedAt, deletedAt);
+        this.id = id;
+        this.item = item;
+        this.name = name;
+        this.url = url;
+        this.size = size;
+        this.resizeName = resizeName;
+        this.resizeUrl = resizeUrl;
+        this.resizeSize = resizeSize;
+    }
 }

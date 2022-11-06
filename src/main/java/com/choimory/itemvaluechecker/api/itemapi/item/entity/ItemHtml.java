@@ -7,12 +7,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
-@Builder
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
 public class ItemHtml extends CommonDateTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +21,13 @@ public class ItemHtml extends CommonDateTimeEntity {
     private Item item;
     private String itemUrl;
     private String priceHtmlTag;
+
+    @Builder(toBuilder = true)
+    public ItemHtml(LocalDateTime createdAt, LocalDateTime modifiedAt, LocalDateTime deletedAt, Long id, Item item, String itemUrl, String priceHtmlTag) {
+        super(createdAt, modifiedAt, deletedAt);
+        this.id = id;
+        this.item = item;
+        this.itemUrl = itemUrl;
+        this.priceHtmlTag = priceHtmlTag;
+    }
 }
