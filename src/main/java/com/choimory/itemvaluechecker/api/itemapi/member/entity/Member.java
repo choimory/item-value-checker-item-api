@@ -5,13 +5,12 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Builder(toBuilder = true)
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 public class Member extends CommonDateTimeEntity {
     @Id
@@ -29,4 +28,17 @@ public class Member extends CommonDateTimeEntity {
     @Builder.Default
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, orphanRemoval = true)
     private List<MemberSuspension> memberSuspensions = new ArrayList<>();
+
+    @Builder(toBuilder = true)
+    public Member(LocalDateTime createdAt, LocalDateTime modifiedAt, LocalDateTime deletedAt, Long id, String identity, String password, String nickname, String email, MemberAuthority memberAuthority, List<MemberSocial> memberSocials, List<MemberSuspension> memberSuspensions) {
+        super(createdAt, modifiedAt, deletedAt);
+        this.id = id;
+        this.identity = identity;
+        this.password = password;
+        this.nickname = nickname;
+        this.email = email;
+        this.memberAuthority = memberAuthority;
+        this.memberSocials = memberSocials;
+        this.memberSuspensions = memberSuspensions;
+    }
 }
