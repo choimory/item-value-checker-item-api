@@ -2,8 +2,9 @@ package com.choimory.itemvaluechecker.api.itemapi.member.entity;
 
 import com.choimory.itemvaluechecker.api.itemapi.common.entity.CommonDateTimeEntity;
 import com.choimory.itemvaluechecker.api.itemapi.member.code.SocialType;
-import lombok.*;
-import lombok.experimental.SuperBuilder;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

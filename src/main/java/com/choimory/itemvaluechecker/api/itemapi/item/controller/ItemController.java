@@ -26,8 +26,7 @@ public class ItemController {
     public ItemViewResponse view(@PathVariable
                                      @Valid
                                      @Min(value = 1)
-                                     @Digits(integer = Integer.MAX_VALUE /*2147483647*/, fraction = 0)
-                                     final Long id){
+                                     @Digits(integer = Integer.MAX_VALUE /*2147483647*/, fraction = 0) final Long id){
         return itemService.view(id);
     }
 
