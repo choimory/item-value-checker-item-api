@@ -12,11 +12,11 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 @Builder
 @NoArgsConstructor
 @Getter
-public class ItemViewResponse extends RepresentationModel<ItemViewResponse> {
+public class ResponseItemFind extends RepresentationModel<ResponseItemFind> {
     @JsonUnwrapped
     private ItemDto item;
 
-    public ItemViewResponse(ItemDto item) {
+    public ResponseItemFind(ItemDto item) {
         this.item = item;
         add(WebMvcLinkBuilder.linkTo(ItemController.class)
                 .slash(item.getId())

@@ -1,4 +1,4 @@
 package com.choimory.itemvaluechecker.api.itemapi.item.data.request;
 
-public class ItemRegistRequest {
+public class RequestItemFindAll {
 }

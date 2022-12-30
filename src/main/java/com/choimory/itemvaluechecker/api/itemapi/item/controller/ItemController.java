@@ -1,10 +1,10 @@
 package com.choimory.itemvaluechecker.api.itemapi.item.controller;
 
-import com.choimory.itemvaluechecker.api.itemapi.item.data.request.ItemRegistRequest;
-import com.choimory.itemvaluechecker.api.itemapi.item.data.request.ItemViewAllRequest;
-import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemRegistResponse;
-import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemViewAllResponse;
-import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemViewResponse;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.request.RequestItemRegister;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.request.RequestItemFindAll;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ResponseItemRegister;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ResponseItemFindAll;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ResponseItemFind;
 import com.choimory.itemvaluechecker.api.itemapi.item.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -23,21 +23,21 @@ public class ItemController {
     private final ItemService itemService;
 
     @GetMapping("/{id}")
-    public ItemViewResponse view(@PathVariable
+    public ResponseItemFind find(@PathVariable
                                      @Valid
                                      @Min(value = 1)
                                      @Digits(integer = Integer.MAX_VALUE /*2147483647*/, fraction = 0) final Long id){
-        return itemService.view(id);
+        return itemService.find(id);
     }
 
     @PostMapping
-    public ItemViewAllResponse viewAll(@RequestBody(required = false) @Valid ItemViewAllRequest param){
-        return itemService.viewAll(param);
+    public ResponseItemFindAll findAll(@RequestBody(required = false) @Valid RequestItemFindAll param){
+        return itemService.findAll(param);
     }
 
     @PutMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ItemRegistResponse regist(@RequestBody @Valid ItemRegistRequest param){
-        return itemService.regist(param);
+    public ResponseItemRegister register(@RequestBody @Valid RequestItemRegister param){
+        return itemService.register(param);
     }
 }

@@ -1,4 +1,4 @@
 package com.choimory.itemvaluechecker.api.itemapi.item.data.response;
 
-public class ItemViewAllResponse {
+public class ResponseItemFindAll {
 }
