@@ -1,12 +1,12 @@
 package com.choimory.itemvaluechecker.api.itemapi.item.service;
 
 import com.choimory.itemvaluechecker.api.itemapi.common.exception.CommonException;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.dto.ItemDto;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.request.ItemRegistRequest;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.request.ItemViewAllRequest;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.response.ItemRegistResponse;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.response.ItemViewAllResponse;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.response.ItemViewResponse;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.dto.ItemDto;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.request.ItemRegistRequest;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.request.ItemViewAllRequest;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemRegistResponse;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemViewAllResponse;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemViewResponse;
 import com.choimory.itemvaluechecker.api.itemapi.item.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

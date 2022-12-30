@@ -1,9 +1,8 @@
-package com.choimory.itemvaluechecker.api.itemapi.item.dto.response;
+package com.choimory.itemvaluechecker.api.itemapi.item.data.response;
 
 import com.choimory.itemvaluechecker.api.itemapi.item.controller.ItemController;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.dto.ItemDto;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.dto.ItemDto;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

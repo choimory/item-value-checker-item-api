@@ -1,10 +1,10 @@
 package com.choimory.itemvaluechecker.api.itemapi.item.controller;
 
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.request.ItemRegistRequest;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.request.ItemViewAllRequest;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.response.ItemRegistResponse;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.response.ItemViewAllResponse;
-import com.choimory.itemvaluechecker.api.itemapi.item.dto.response.ItemViewResponse;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.request.ItemRegistRequest;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.request.ItemViewAllRequest;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemRegistResponse;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemViewAllResponse;
+import com.choimory.itemvaluechecker.api.itemapi.item.data.response.ItemViewResponse;
 import com.choimory.itemvaluechecker.api.itemapi.item.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

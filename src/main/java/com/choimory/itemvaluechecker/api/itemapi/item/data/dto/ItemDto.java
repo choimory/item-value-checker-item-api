@@ -1,8 +1,6 @@
-package com.choimory.itemvaluechecker.api.itemapi.item.dto.dto;
+package com.choimory.itemvaluechecker.api.itemapi.item.data.dto;
 
 import com.choimory.itemvaluechecker.api.itemapi.item.entity.*;
-import com.choimory.itemvaluechecker.api.itemapi.member.code.AuthLevel;
-import com.choimory.itemvaluechecker.api.itemapi.member.code.SocialType;
 import com.choimory.itemvaluechecker.api.itemapi.member.entity.Member;
 import com.choimory.itemvaluechecker.api.itemapi.member.entity.MemberAuthority;
 import com.choimory.itemvaluechecker.api.itemapi.member.entity.MemberSocial;
@@ -82,7 +80,7 @@ public class ItemDto {
         @Getter
         public static class MemberAuthorityDto {
             private Long id;
-            private AuthLevel authLevel;
+            private MemberAuthority.AuthLevel authLevel;
 
             public static MemberAuthorityDto toDto(MemberAuthority memberAuthority){
                 return memberAuthority == null
@@ -100,7 +98,7 @@ public class ItemDto {
         @Getter
         public static class MemberSocialDto {
             private Long id;
-            private SocialType socialType;
+            private MemberSocial.SocialType socialType;
             private String socialId;
 
             public static MemberSocialDto toDto(MemberSocial memberSocial){
